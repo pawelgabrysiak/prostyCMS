@@ -1,1 +1,1 @@
-# prostyCMS
+# Prosty CMS
