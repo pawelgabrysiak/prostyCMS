@@ -39,24 +39,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
 <h2>Dodaj artykuł</h2>
+    <!-- Formularz do dodawania artykułu -->
 <form action="add_article.php" method="post" enctype="multipart/form-data"> 
+    <!-- form z atrybutem enctype="multipart/form-data" pozwala na przesyłanie plików (zdjęć) razem z danymi tekstowymi -->
     <input type="text" name="title" placeholder="Tytuł" required>
     <input type="text" name="summary" placeholder="Streszczenie" required>
     <textarea name="content" placeholder="Treść artykułu" required></textarea>
+        <!-- Pola formlarza -->
 
+    <!-- Przesyłanie zdjęcia -->
     <label for="image">Dodaj zdjęcie:</label>
     <input type="file" name="image" accept="image/*">
 
+    <!-- Wybór formatu wyświetlania -->
     <label for="format">Wybierz format wyświetlania:</label>
     <select name="format" required>
         <option value="top-image">Zdjęcie na górze</option>
         <option value="text-wrap">Tekst opływający zdjęcie</option>
         <option value="no-image">Bez zdjęcia</option>
     </select>
+    <!-- Administrator wybiera, jak chce aby zdjęcie było wyświtlane, u góry, obok tekstu lub bez zdjęcia -->
 
+    <!-- Przycisk dodawania artykułu -->
     <button type="submit">Dodaj artykuł</button>
 </form>
 
+    <!-- Link powrotny do panelu administratora -->
 <a href="admin.php">Powrót do panelu</a>
 
 </body>
