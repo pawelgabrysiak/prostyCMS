@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $content = $_POST['content'];
     $format = $_POST['format'];
     $image = null;
-// Pobieranie danych wpisanych z pola formularza, tytuł, streszczenie, opis, format wyświetlania oraz opcjonalne zdjęcie
+// Pobieranie danych wpisanych z pola formularza, tytuł, streszczenie, treść artykułu, format wyświetlania oraz opcjonalne zdjęcie
 
     // Obsługa przesyłania zdjęcia
     if (!empty($_FILES["image"]["name"])) {
